@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-04-02T15:58:35.013723" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="/Users/anhtruong/robot_mobile_test/robot_mobile_test/tests/login_test.robot">
+<test id="s1-t1" name="Test QR Code Scanner App" line="13">
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2025-04-02T15:58:35.098698" level="FAIL">Variable '${PLATFORM_VERSION}' not found.</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2025-04-02T15:58:35.098411" elapsed="0.000313">Variable '${PLATFORM_VERSION}' not found.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" start="2025-04-02T15:58:35.098817" elapsed="0.000012"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="NOT RUN" start="2025-04-02T15:58:35.098876" elapsed="0.000008"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<arg>Wait Until Page Contains Element</arg>
+<arg>//*[@text="Scan QR Code"]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="NOT RUN" start="2025-04-02T15:58:35.098927" elapsed="0.000007"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//*[@text="Scan QR Code"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-04-02T15:58:35.098971" elapsed="0.000006"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-02T15:58:35.099010" elapsed="0.000006"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<arg>Page Should Contain Element</arg>
+<arg>//*[@text="Scanning..."]</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="NOT RUN" start="2025-04-02T15:58:35.099051" elapsed="0.000006"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="NOT RUN" start="2025-04-02T15:58:35.099090" elapsed="0.000123"/>
+</kw>
+<status status="FAIL" start="2025-04-02T15:58:35.098026" elapsed="0.001254">Variable '${PLATFORM_VERSION}' not found.</status>
+</test>
+<status status="FAIL" start="2025-04-02T15:58:35.014526" elapsed="0.084905"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-02T15:58:35.014611" level="ERROR">Error in file '/Users/anhtruong/robot_mobile_test/robot_mobile_test/tests/login_test.robot' on line 7: Setting variable '${PLATFORM_VERSION} 11' failed: Invalid variable name '${PLATFORM_VERSION} 11'.</msg>
+</errors>
+</robot>
